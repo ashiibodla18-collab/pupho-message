@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Lovely Pupho 🌸</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #fff5f9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 750px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 36px;
+}
+
+p {
+    font-size: 22px;
+    line-height: 2;
+    color: #5a0033;
+    opacity: 0;
+    animation: textReveal 5s forwards;
+    animation-delay: 2s;
+}
+
+.signature {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #b30059;
+    opacity: 0;
+    animation: textReveal 5s forwards;
+    animation-delay: 6s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes textReveal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.flower {
+    position: absolute;
+    font-size: 25px;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);}
+    to {transform: translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>میری پیاری پُھو 🌸</h1>
+    
+    <p>
+        میں آپ سے بہت محبت کرتی ہوں۔  
+        آپ واقعی سب سے بہترین ہیں۔  
+        آپ کی محبت اور خلوص میرے لیے دنیا کی سب سے قیمتی نعمت ہے۔  
+        آج کے افطار کی تیاری نے میرا دل خوش کر دیا۔  
+        اللہ آپ کو ہمیشہ خوش رکھے۔ ❤️  
+    </p>
+
+    <div class="signature">
+        ہمیشہ آپ کی شکر گزار  
+        <br>
+        💕 From your loving bhateeji Ayesha 💕
+    </div>
+</div>
+
+<script>
+function createFlower() {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    flower.innerHTML = "🌸";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+        flower.remove();
+    }, 10000);
+}
+
+setInterval(createFlower, 700);
+</script>
+
+</body>
+</html>
